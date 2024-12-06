@@ -1,117 +1,145 @@
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formaty płyt głównych</title>
+    <title>Tabela z ciemną kolumną</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            margin: 20px;
         }
+
         table {
             width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            border: 3px solid #006aa5; /* Obramowanie z 3 liniami */
+            border-collapse: collapse; /* Usuwa przerwy między komórkami */
+            border: 6px double black; /* Podwójna linia wokół całej tabeli */
         }
+
         th, td {
-            border: 1px solid #006aa5; /* Wewnętrzne cienkie obramowanie */
+            border: 1px solid black; /* Cienkie linie wokół komórek */
+            padding: 10px;
             text-align: center;
-            padding: 8px;
         }
+
         th {
-            background-color: #006aa5;
-            color: #ccf1fc; /* Jasny niebieski tekst nagłówka */
+            background-color: #4f81bd; /* Kolor nagłówków */
+            color: white; /* Biały kolor tekstu */
+            font-size: 14px;
             font-weight: bold;
         }
-        td {
-            background-color: #ccf1fc;
-            color: #004080; /* Ciemny niebieski tekst komórek */
-        }
+
         .header {
-            background-color: #008ecf;
-            color: white;
+            background-color: #4f81bd; /* Kolor tła nagłówka tabeli */
+            color: white; /* Biały tekst */
+            text-align: center;
+            font-size: 18px;
+            padding: 10px;
+            font-weight: bold;
+            border: 6px double black; /* Podwójne obramowanie wokół nagłówka */
+            border-bottom: none; /* Usunięcie dolnego obramowania */
+        }
+
+        .vertical-text {
+            writing-mode: vertical-lr; /* Tekst pionowy */
+            transform: rotate(180deg); /* Odwrócony tekst pionowy */
+            background-color: #d9eaf7; /* Dopasowanie tła */
+            font-weight: bold;
+            color: black;
+        }
+
+        /* Naprzemienne kolorowanie wierszy poza pierwszą kolumną */
+        tr:nth-child(even) td:not(:first-child) {
+            background-color: #d9eaf7; /* Jasny niebieski */
+        }
+
+        tr:nth-child(odd) td:not(:first-child) {
+            background-color: #b8d1f3; /* Ciemny niebieski */
+        }
+
+        /* Kolumna Format Płyty Głównej */
+        .format-column, .format-column-header {
+            background-color: #4f81bd; /* Ciemniejszy niebieski kolor */
+            color: white; /* Biały tekst */
             font-weight: bold;
         }
     </style>
 </head>
 <body>
+    <div class="header">Dane Komputerowe – Natalia Narkiewicz 2F1</div>
     <table>
-        <thead>
-            <tr>
-                <th>Format płyty głównej</th>
-                <th>Wymiary szerokość x wysokość</th>
-                <th>Opis</th>
-                <th>Zastosowanie</th>
-                <th>Rok wydania</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>ATX</td>
-                <td>305 mm x 244 mm</td>
-                <td>Standardowy format, kompatybilny z większością obudów. Oferuje wiele slotów i portów</td>
-                <td>Komputery domowe, biurowe, gamingowe i stacje robocze</td>
-                <td>1995</td>
-            </tr>
-            <tr>
-                <td>Micro-ATX</td>
-                <td>244 mm x 244 mm</td>
-                <td>Kompaktowy format, mniej slotów niż ATX, kompatybilny z mniejszymi obudowami</td>
-                <td>Komputery biurowe, HTPC, mniej wymagające konfiguracje gamingowe</td>
-                <td>1997</td>
-            </tr>
-            <tr>
-                <td>Mini-ITX</td>
-                <td>170 mm x 170 mm</td>
-                <td>Bardzo mały format, idealny do kompaktowych komputerów. Mniej funkcji i rozszerzeń</td>
-                <td>Komputery kompaktowe, HTPC, urządzenia przenośne i multimedia</td>
-                <td>2001</td>
-            </tr>
-            <tr>
-                <td>E-ATX</td>
-                <td>305 mm x 330 mm</td>
-                <td>Większy niż ATX, więcej slotów i funkcji, często używany w komputerach profesjonalistów</td>
-                <td>Zaawansowane komputery gamingowe, stacje robocze dla profesjonalistów</td>
-                <td>2000</td>
-            </tr>
-            <tr>
-                <td>XL-ATX</td>
-                <td>345 mm x 262 mm</td>
-                <td>Rozszerzony format do bardzo zaawansowanych konfiguracji, wymaga dużej obudowy</td>
-                <td>Ekstremalne konfiguracje gamingowe i entuzjastyczne systemy komputerowe</td>
-                <td>2009</td>
-            </tr>
-            <tr>
-                <td>Flex-ATX</td>
-                <td>229 mm x 191 mm</td>
-                <td>Mniejszy od Micro-ATX, rzadziej spotykany, stosowany w niestandardowych projektach</td>
-                <td>Komputery przemysłowe, customowe projekty komputerowe</td>
-                <td>1999</td>
-            </tr>
-            <tr>
-                <td>Nano-ITX</td>
-                <td>120 mm x 120 mm</td>
-                <td>Jeszcze mniejszy format niż Mini-ITX, stosowany w urządzeniach embedded</td>
-                <td>Embedded, IoT, automatyka domowa i przemysłowa</td>
-                <td>2003</td>
-            </tr>
-            <tr>
-                <td>Pico-ITX</td>
-                <td>100 mm x 72 mm</td>
-                <td>Bardzo mały format, przeznaczony do specjalistycznych zastosowań, takich jak IoT</td>
-                <td>IoT, miniaturowe urządzenia, urządzenia przenośne</td>
-                <td>2007</td>
-            </tr>
-            <tr>
-                <td>Thin Mini-ITX</td>
-                <td>170 mm x 170 mm (cienisza)</td>
-                <td>Odmiana Mini-ITX, zredukowana wysokość, idealna do komputerów All-in-One</td>
-                <td>Komputery All-in-One, kompaktowe urządzenia multimedialne</td>
-                <td>2011</td>
-            </tr>
-        </tbody>
+        <tr>
+            <th class="vertical-text" rowspan="10">WYMIARY PŁYT GŁÓWNYCH</th>
+            <th class="format-column-header">Format płyty głównej</th>
+            <th>Wymiary szerokość × wysokość</th>
+            <th>Opis</th>
+            <th>Zastosowanie</th>
+            <th>Rok wydania</th>
+        </tr>
+        <tr>
+            <td class="format-column">ATX</td>
+            <td>305mm × 244mm</td>
+            <td>Standardowy format, kompatybilny z większą ilością obudów. Oferuje wiele slotów i portów.</td>
+            <td>Komputery domowe, biurowe, serwery i stacje robocze</td>
+            <td>1995</td>
+        </tr>
+        <tr>
+            <td class="format-column">Micro-ATX</td>
+            <td>244mm × 244mm</td>
+            <td>Kompaktowy format, mniej slotów niż ATX, kompatybilny z mniejszymi obudowami.</td>
+            <td>Komputery biurowe, HTPC, mniej wymagające konfiguracje</td>
+            <td>1997</td>
+        </tr>
+        <tr>
+            <td class="format-column">Mini-ITX</td>
+            <td>170mm × 170mm</td>
+            <td>Bardzo mały format, zaprojektowany do kompaktowych urządzeń.</td>
+            <td>Komputery kompaktowe, HTPC, urządzenia przenośne i multimedia</td>
+            <td>2001</td>
+        </tr>
+        <tr>
+            <td class="format-column">E-ATX</td>
+            <td>305mm × 330mm</td>
+            <td>Większy niż ATX, więcej funkcji i rozszerzeń.</td>
+            <td>Zaawansowane komputery gamingowe, stacje robocze dla profesjonalistów.</td>
+            <td>2000</td>
+        </tr>
+        <tr>
+            <td class="format-column">ATX-XL</td>
+            <td>345mm × 262mm</td>
+            <td>Ekstremalne konfiguracje, wymaga dużej obudowy.</td>
+            <td>Entuzjastyczne systemy komputerowe</td>
+            <td>2009</td>
+        </tr>
+        <tr>
+            <td class="format-column">Flex-ATX</td>
+            <td>229mm × 191mm</td>
+            <td>Mniejszy od Micro-ATX, stosowany w niestandardowych projektach.</td>
+            <td>Komputery przemysłowe, projekty komputerowe</td>
+            <td>1999</td>
+        </tr>
+        <tr>
+            <td class="format-column">Nano-ITX</td>
+            <td>120mm × 120mm</td>
+            <td>Bardzo mały format, stosowany w urządzeniach embedded.</td>
+            <td>Embedded, IoT, automatyka domowa i przemysłowa</td>
+            <td>2003</td>
+        </tr>
+        <tr>
+            <td class="format-column">Pico-ITX</td>
+            <td>100mm × 72mm</td>
+            <td>Bardzo mały format, przeznaczony do specjalistycznych zastosowań.</td>
+            <td>IoT, miniaturowe urządzenia, urządzenia przenośne.</td>
+            <td>2007</td>
+        </tr>
+        <tr>
+            <td class="format-column">Thin Mini-ITX</td>
+            <td>170mm × 170mm (cieńsza)</td>
+            <td>Odmiana Mini-ITX, zredukowana wysokość.</td>
+            <td>Komputery All-in-One, kompaktowe urządzenia</td>
+            <td>2011</td>
+        </tr>
     </table>
 </body>
 </html>

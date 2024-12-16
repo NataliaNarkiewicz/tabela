@@ -1,145 +1,50 @@
-
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabela z ciemną kolumną</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse; /* Usuwa przerwy między komórkami */
-            border: 6px double black; /* Podwójna linia wokół całej tabeli */
-        }
-
-        th, td {
-            border: 1px solid black; /* Cienkie linie wokół komórek */
-            padding: 10px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #4f81bd; /* Kolor nagłówków */
-            color: white; /* Biały kolor tekstu */
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        .header {
-            background-color: #4f81bd; /* Kolor tła nagłówka tabeli */
-            color: white; /* Biały tekst */
-            text-align: center;
-            font-size: 18px;
-            padding: 10px;
-            font-weight: bold;
-            border: 6px double black; /* Podwójne obramowanie wokół nagłówka */
-            border-bottom: none; /* Usunięcie dolnego obramowania */
-        }
-
-        .vertical-text {
-            writing-mode: vertical-lr; /* Tekst pionowy */
-            transform: rotate(180deg); /* Odwrócony tekst pionowy */
-            background-color: #d9eaf7; /* Dopasowanie tła */
-            font-weight: bold;
-            color: black;
-        }
-
-        /* Naprzemienne kolorowanie wierszy poza pierwszą kolumną */
-        tr:nth-child(even) td:not(:first-child) {
-            background-color: #d9eaf7; /* Jasny niebieski */
-        }
-
-        tr:nth-child(odd) td:not(:first-child) {
-            background-color: #b8d1f3; /* Ciemny niebieski */
-        }
-
-        /* Kolumna Format Płyty Głównej */
-        .format-column, .format-column-header {
-            background-color: #4f81bd; /* Ciemniejszy niebieski kolor */
-            color: white; /* Biały tekst */
-            font-weight: bold;
-        }
-    </style>
+<meta charset="utf-8" />
+<title>cw-02 HTML</title>
+<meta name="description" content="cw-02" />
+<meta name="keywords" content="HTML" />
+<meta name="author" content="Natalia Narkiewicz, 2F" />
 </head>
 <body>
-    <div class="header">Dane Komputerowe – Natalia Narkiewicz 2F1</div>
-    <table>
-        <tr>
-            <th class="vertical-text" rowspan="10">WYMIARY PŁYT GŁÓWNYCH</th>
-            <th class="format-column-header">Format płyty głównej</th>
-            <th>Wymiary szerokość × wysokość</th>
-            <th>Opis</th>
-            <th>Zastosowanie</th>
-            <th>Rok wydania</th>
-        </tr>
-        <tr>
-            <td class="format-column">ATX</td>
-            <td>305mm × 244mm</td>
-            <td>Standardowy format, kompatybilny z większą ilością obudów. Oferuje wiele slotów i portów.</td>
-            <td>Komputery domowe, biurowe, serwery i stacje robocze</td>
-            <td>1995</td>
-        </tr>
-        <tr>
-            <td class="format-column">Micro-ATX</td>
-            <td>244mm × 244mm</td>
-            <td>Kompaktowy format, mniej slotów niż ATX, kompatybilny z mniejszymi obudowami.</td>
-            <td>Komputery biurowe, HTPC, mniej wymagające konfiguracje</td>
-            <td>1997</td>
-        </tr>
-        <tr>
-            <td class="format-column">Mini-ITX</td>
-            <td>170mm × 170mm</td>
-            <td>Bardzo mały format, zaprojektowany do kompaktowych urządzeń.</td>
-            <td>Komputery kompaktowe, HTPC, urządzenia przenośne i multimedia</td>
-            <td>2001</td>
-        </tr>
-        <tr>
-            <td class="format-column">E-ATX</td>
-            <td>305mm × 330mm</td>
-            <td>Większy niż ATX, więcej funkcji i rozszerzeń.</td>
-            <td>Zaawansowane komputery gamingowe, stacje robocze dla profesjonalistów.</td>
-            <td>2000</td>
-        </tr>
-        <tr>
-            <td class="format-column">ATX-XL</td>
-            <td>345mm × 262mm</td>
-            <td>Ekstremalne konfiguracje, wymaga dużej obudowy.</td>
-            <td>Entuzjastyczne systemy komputerowe</td>
-            <td>2009</td>
-        </tr>
-        <tr>
-            <td class="format-column">Flex-ATX</td>
-            <td>229mm × 191mm</td>
-            <td>Mniejszy od Micro-ATX, stosowany w niestandardowych projektach.</td>
-            <td>Komputery przemysłowe, projekty komputerowe</td>
-            <td>1999</td>
-        </tr>
-        <tr>
-            <td class="format-column">Nano-ITX</td>
-            <td>120mm × 120mm</td>
-            <td>Bardzo mały format, stosowany w urządzeniach embedded.</td>
-            <td>Embedded, IoT, automatyka domowa i przemysłowa</td>
-            <td>2003</td>
-        </tr>
-        <tr>
-            <td class="format-column">Pico-ITX</td>
-            <td>100mm × 72mm</td>
-            <td>Bardzo mały format, przeznaczony do specjalistycznych zastosowań.</td>
-            <td>IoT, miniaturowe urządzenia, urządzenia przenośne.</td>
-            <td>2007</td>
-        </tr>
-        <tr>
-            <td class="format-column">Thin Mini-ITX</td>
-            <td>170mm × 170mm (cieńsza)</td>
-            <td>Odmiana Mini-ITX, zredukowana wysokość.</td>
-            <td>Komputery All-in-One, kompaktowe urządzenia</td>
-            <td>2011</td>
-        </tr>
-    </table>
+<h1>LOREM IPSUM</h1>
+    <!-- Lista nieuporządkowana z hiperłączami do strony szkoły -->
+    <ul>
+        <li><a href="https://zse.edu.gdansk.pl/pl">ZSE Gdańsk - Strona główna</a></li>
+        <li><a href="https://cms-panel.edu.gdansk.pl/Content/pub/458/Plan_lekcji/plan2018/index.html">ZSE Gdańsk - Plan lekcji </a></li>
+        <li><a href="https://zse.edu.gdansk.pl/pl/page/kontakt-1-17">ZSE Gdańsk - Kontakt</a></li>
+    </ul>
+ZSE Gdańsk	
+</p>
+<h2> Lorem Ipsum </h2>
+ 
+
+<!-- Drugi akapit -->
+<p style="text-indent: 20px">
+	Lorem ipsum dolor sit amet, eu nonumy splendide eos, in option feugait propriae vix, reque tation verear est at. Semper alterum pertinacia eos at, pri homero minimum appetere ei. An utinam oportere instructior sed, at nisl vitae mei, has no reque epicurei. Ad nostrud eloquentiam est, pri postea verterem in. Viderer docendi eloquentiam vix ut, tale ullum ei mei, eum id eius tamquam.
+</p> <br>
+<p style="text-indent: 20px"> 	Cu sed fuisset assueverit, adhuc lobortis his in. Esse nemore oporteat vim no, pro sumo evertitur ea, no mei diam omnes rationibus. An mel movet persius inimicus, eros consul pri ea, labores conclusionemque ne vis. Id rebum reprehendunt vel, latine appareat postulant ei mei, duo ad tale epicurei oporteat. </p>
+<br>
+ 
+<img scr="C:\Users\2F_1\Desktop/600" alt="Lorem Ipsum" >
+ 
+    <!-- Lista uporządkowana z porami roku -->
+<ol type="I">
+<li type="A">Jesień
+<ul>
+<li>Październik</li>
+<li>Listopad</li>
+<li>Grudzień</li>
+</ul>
+</li>
+<li type="A" >Zima
+<ul>
+<li>Grudzień</li>
+<li>Styczeń</li>
+<li>Luty</li>
+</ul>
+</li>
+</ol>
 </body>
 </html>
